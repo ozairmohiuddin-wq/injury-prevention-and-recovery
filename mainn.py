@@ -28,7 +28,7 @@ Experience_Level=st.selectbox("Select athlete experience level: ", ["Beginner", 
 Training_Intensity_Level=st.selectbox("Select athlete training intensity level: ", ["Low", "Moderate", "High", "Extreme"])
 Previous_Injuries=st.text_area("Enter athlete previous injuries: ")
 Recent_Injuries=st.text_area("Enter athlete recent injuries: ")
-Current_Training_Frequency=st.text_input("Enter athlete current training frequency (e.g., 5 days/week): ")
+Current_Training_Frequency=st.text_input("Enter athlete current training frequency (e.g., 5 days/week on tuesdays and thursdays): ")
 Games_Per_Week=st.number_input("Enter athlete games per week on average: ", min_value=0, max_value=14, step=1)
 Average_Minutes_Played_Per_Game=st.number_input("Enter athlete average minutes played per game: ", min_value=0, max_value=240, step=1)
 Dietary_Habits=st.text_area("Enter athlete dietary habits: ")
@@ -67,3 +67,4 @@ if st.button("Get Injury Risk Analysis and Recommendations"):
     with st.spinner("Processing your data..."):
         response=model.generate_content(prompt)   
     st.write(response.text)
+
