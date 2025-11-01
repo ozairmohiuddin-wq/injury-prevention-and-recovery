@@ -34,7 +34,7 @@ Average_Minutes_Played_Per_Game=st.number_input("Enter athlete average minutes p
 Dietary_Habits=st.text_area("Enter athlete dietary habits: ")
 Other_Notes=st.text_area("Enter athlete other notes: ")
 prompt=f"""You are an experienced sports scientist and injury prevention specialist.Dont add unnessecary text about yourself.
-Analyze the following athlete profile and estimate their injury risk level (Low, Moderate, High).
+Analyze the following athlete profile and estimate their injury risk level .
 Use evidence-based reasoning related to biomechanics, training load, sport-specific in jury patterns, and history of previous injuries.
 Then, explain why the athlete has that risk level and give 3–5 actionable recommendations to reduce injury risk as well as a recovery plan to help any current injuries heal by giving a schedule for each day of the week to maximize the healing process.Use mainly things that can be done by a average youth soccer player(no crazy expensive equipment, dont change the current practices they have since coaches will not change their practice session. do mainly things outside of practice. and remeber lots of users are in school so they have a limited time  )    
 Athlete Data:     
@@ -67,5 +67,6 @@ if st.button("Get Injury Risk Analysis and Recommendations"):
     with st.spinner("Processing your data..."):
         response=model.generate_content(prompt)   
     st.write(response.text)
+
 
 
