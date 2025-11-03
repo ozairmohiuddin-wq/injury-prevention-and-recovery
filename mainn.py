@@ -55,7 +55,7 @@ Average Minutes Played Per Game: {Average_Minutes_Played_Per_Game}
 Dietary Habits: {Dietary_Habits}
 Other Notes: {Other_Notes}
 Output Format:
-Injury Risk Level: (give a risk estimate))
+Injury Risk Level: (give a risk estimate)
 Risk Factors Identified: (list specific reasons)   
 Recommendations to Reduce Injury Risk:
 Recovery Plan: (Provide a day-by-day schedule for healing)
@@ -67,3 +67,4 @@ if st.button("Get Injury Risk Analysis and Recommendations"):
     with st.spinner("Processing your data..."):
         response=model.generate_content(prompt)   
     st.write(response.text)
+
