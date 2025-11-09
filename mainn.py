@@ -1,6 +1,6 @@
 import streamlit as st
 import google.generativeai as genai
-genai.configure(api_key="AIzaSyBXrXnbJ2jo3V4mlgeZtT-dp9jM5Ms8SvY")
+genai.configure(api_key="AIzaSyCyAgxDUoNbr2Ww8tCdfs5esYs8eeeHSDE")
 model=genai.GenerativeModel("gemini-2.5-flash")
 # Inject light-blue background for the Streamlit app
 st.markdown(
@@ -67,6 +67,7 @@ if st.button("Get Injury Risk Analysis and Recommendations"):
     with st.spinner("Processing your data..."):
         response=model.generate_content(prompt)   
     st.write(response.text)
+
 
 
 
